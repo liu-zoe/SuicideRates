@@ -25,18 +25,24 @@ The purpose of this project is to review suicides rates from 1985 to 2016 on a g
 (Provide more detailed overview of the project.  Talk a bit about your data sources and what questions and hypothesis you are exploring. What specific data analysis/visualization and modelling work are you using to solve the problem? What blockers and challenges are you facing?  Feel free to number or bullet point things here)
 
 ### Data Source
-https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016
+* Suicide Rates data are extracted from [Kaggle](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016)
+* Unemployment data are extracted from [World Bank](wdi.worldbankd.org)
+* World Happiness data are extracted from [Gallup](https://analyticscampus.gallup.com/Explore)
 
 ## __Needs of this project__
-* data exploration/descriptive statistics
 * data processing/cleaning
+* data exploration/descriptive statistics
 * statistical modeling
 * data visualization
 * UX design
 * writeup/reporting
 * [-----Enter more here----]
 
-
+## Files
+- master.csv (suicide rates data)
+- UEM.csv (Unemployment rates data)
+- 01 SR-DATA.py (data processing)
+- 02 SR-Explore.py (data exploration)
 ------------------------------------------------------------------------
 DELETE THE FOLLOWING LINES WHEN FINALIZING THE PROJECT 
 
