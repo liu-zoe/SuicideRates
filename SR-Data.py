@@ -77,6 +77,18 @@ regions= {
     'NAC': 'North America', 
 }
 region['region']=region['region_id'].map(regions)
+
+regions2= {
+    'ECS': 'Europe and Central Asia',
+    'SSF': 'Sub-Saharan Africa',
+    'LCN': 'Latin America and the Caribbean',
+    'EAS': 'Asia and Pacific',
+    'MEA': 'Middle East and North Africa',
+    'SAS': 'Asia and Pacific',
+    'NAC': 'North America', 
+}
+region['region2']=region['region_id'].map(regions2)
+
 # Mapping Income Labels against Income ID
 incomes={
     'HIC': 'High-income',
@@ -85,7 +97,7 @@ incomes={
     'LIC': 'Low-income'
 }
 region['income']=region['income_id'].map(incomes)
-region.columns=['region_id','country','income_id','region','income']
+region.columns=['region_id','country','income_id','region','region2','income']
 master=pd.merge(master, region, how='left',left_on=['country'], right_on=['country'])
 del cdat
 
@@ -140,29 +152,29 @@ del gallup
 # Merge the happiness data (2006 to 2016) to the SR data
 master=pd.merge(master, happy, how='left', left_on=['country','year'], right_on=['country','year'])
 
-#%%[markdown] 
+#%%
 #### Take a look at the key variabless
 # Country
-master['country'].value_counts()
+#master['country'].value_counts()
 #%%[markdown]
 # Region
-master['region'].value_counts().sort_index()
+#master['region'].value_counts().sort_index()
 #%%[markdown]
 # Year
-master['year'].value_counts().sort_index()
+#master['year'].value_counts().sort_index()
 #%%[markdown]
 # Gender Groups
-master['sex'].value_counts().sort_index()
+#master['sex'].value_counts().sort_index()
 #%%[markdown] 
 # Age Groups
-master['age'].value_counts().sort_index()
+#master['age'].value_counts().sort_index()
 #%%[markdown] 
 # Generation Groups
-master['generation'].value_counts().sort_index()
+#master['generation'].value_counts().sort_index()
 #%%[markdown] 
 # Suicide Counts
-master['suicides_no'].describe()
+#master['suicides_no'].describe()
 #%%[markdown] 
 # HDI
-master['HDI for year'].describe()
+#master['HDI for year'].describe()
 #%%
