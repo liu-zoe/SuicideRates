@@ -26,10 +26,17 @@
 - [North America](https://plot.ly/~zoelzh/217/)
 - [South Asia](https://plot.ly/~zoelzh/219/)
 - [All Countries](https://plot.ly/~zoelzh/221/)
-- [Suicide vs GDP in 2014](https://plot.ly/~zoelzh/223/)
+##### SR vs GDP
 - [Suicide vs GDP](https://plot.ly/~zoelzh/231/)
 - [Suicide vs GDP by Income](https://plot.ly/~zoelzh/235/)
 - [Suicide vs GDP by Region](https://plot.ly/~zoelzh/237/)
+- [Year-on-Year Change in SR vs. GDP](https://plot.ly/~zoelzh/239/)
+- [Year-on-Year Change in SR vs. GDP Decrease](https://plot.ly/~zoelzh/241/)
+- [Year-on-Year Change in SR vs. GDP with Gini](https://plot.ly/~zoelzh/273/)
+##### SR vs Unemployment
+- [Suicide vs Unemployment](https://plot.ly/~zoelzh/249/)
 - [Suicide vs Unemployment in 2014](https://plot.ly/~zoelzh/225/)
-- [Suicide vs Gini in 2014](https://plot.ly/~zoelzh/227/)
-- [Suicide vs Gini in 2013](https://plot.ly/~zoelzh/229/)
+##### SR vs Gini
+- [Suicide vs Gini](https://plot.ly/~zoelzh/271/)
+##### SR vs Happiness
+- [Suicide vs Happiness](https://plot.ly/~zoelzh/261/)
