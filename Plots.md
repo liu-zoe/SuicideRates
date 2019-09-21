@@ -25,8 +25,11 @@
 - [Sub-Saharan Africa](https://plot.ly/~zoelzh/215/)
 - [North America](https://plot.ly/~zoelzh/217/)
 - [South Asia](https://plot.ly/~zoelzh/219/)
+- [USSR](https://plot.ly/~zoelzh/285/)
 - [All Countries](https://plot.ly/~zoelzh/221/)
 ##### SR vs GDP
+- [GDP](https://plot.ly/~zoelzh/279/)
+- [USSR GDP](https://plot.ly/~zoelzh/287/)
 - [Suicide vs GDP](https://plot.ly/~zoelzh/231/)
 - [Suicide vs GDP by Income](https://plot.ly/~zoelzh/235/)
 - [Suicide vs GDP by Region](https://plot.ly/~zoelzh/237/)
@@ -34,6 +37,7 @@
 - [Year-on-Year Change in SR vs. GDP Decrease](https://plot.ly/~zoelzh/241/)
 - [Year-on-Year Change in SR vs. GDP with Gini](https://plot.ly/~zoelzh/273/)
 ##### SR vs Unemployment
+- [Unemployment](https://plot.ly/~zoelzh/281/)
 - [Suicide vs Unemployment](https://plot.ly/~zoelzh/249/)
 - [Suicide vs Unemployment in 2014](https://plot.ly/~zoelzh/225/)
 ##### SR vs Gini
