@@ -1,50 +1,40 @@
-# SuicideRates
-Review Suicide Rates from 1985 to 2016
+# Does the economy affect suicide rates?
+An exploration of suicide data from 1979 to 2016 in 128 countries, examining how national suicide rates change with the economy. 
 
 #### -- Project Status: [Active] --
 
-## __Project Intro__
-The purpose of this project is to review suicides rates from 1985 to 2016 on a global scale and study 1) how it changes over time, 2) whether there is a difference in age and gender groups, and 3) how do the the suicide rates associate with factors such as GDP, unemployment rate etc.
-
-### Co-Authors
-* Ying Zhang  (https://github.com/Yaeno)
-* Zoe Liu (https://github.com/liu-zoe)
-
-### Methods Used
-* [-----Enter more here----]
-
-### Technologies
-* Python
-* Pandas, numpy, scipy
-* D3
-* HTML
-* JavaScript
-* [----Enter more here-----] 
-
 ## __Project Description__
-(Provide more detailed overview of the project.  Talk a bit about your data sources and what questions and hypothesis you are exploring. What specific data analysis/visualization and modelling work are you using to solve the problem? What blockers and challenges are you facing?  Feel free to number or bullet point things here)
+We started by exploring the WHO suicide data and want to study the global suicide trends across time and what may influence the trends. 
+We setteled on economy as the co-variate because of availability and quality of economic statistics over time on a global level. 
+Inital hypothesis is that as economy suffered, the suicide count would increase. 
 
 ### Data Source
-* Suicide Rates data are extracted from [Kaggle](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016)
-* Unemployment data are extracted from [World Bank](wdi.worldbankd.org)
-* World Happiness data are extracted from [Gallup](https://analyticscampus.gallup.com/Explore)
+* Suicide Rates data are extracted from [WHO Mortality Database](https://www.who.int/healthinfo/mortality_data/en/)
+* Economic data (GDP, unemployment etc.) are extracted from [World Bank](https://data.worldbank.org/)
 
-## __Needs of this project__
-* data processing/cleaning
-* data exploration/descriptive statistics
-* statistical modeling
-* data visualization
-* UX design
-* writeup/reporting
-* [-----Enter more here----]
+### What we used to write the story
+* Python
+* Pandas, numpy, scipy
+* Plotly
+* HTML/CSS
+
+### Steps we took to write the story
+* Data processing/cleaning
+* Data exploration/descriptive statistics
+* Data visualization
+* Writeup/reporting
 
 ## Files
-- master.csv (suicide rates data)
-- UEM.csv (Unemployment rates data)
-- 01 SR-DATA.py (data processing)
-- 02 SR-Explore.py (data exploration)
-------------------------------------------------------------------------
-DELETE THE FOLLOWING LINES WHEN FINALIZING THE PROJECT 
+- index.html (data story)
+- main.css (stylesheet)
+- SR-Plots.py (data visualization)
+- docs/SR-Data.py (data processing)
+- docs/SR-Explore.py (data exploration)
+- docs/SR-Story.py (draft of the story)
 
-A cheatsheet to help me navigate how to collaborate on github:
-https://medium.com/@jonathanmines/the-ultimate-github-collaboration-guide-df816e98fb67
+### Author
+* Zoe Liu (https://github.com/liu-zoe)
+### Contributor
+* Ying Zhang  (https://github.com/Yaeno)
+
+------------------------------------------------------------------------

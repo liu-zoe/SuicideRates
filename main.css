@@ -12,11 +12,14 @@ h2{
     font-size:3em;
     font-weight:bolder;
 }
+h3{
+    font-size:2.5em;
+    font-weight:bolder;
+}
 p{
     font-size:2em;
 }
-
-.intro{
+.intro, .story, .data {
     text-align: center
 }
 
@@ -26,14 +29,43 @@ p{
     padding: 0% 20% 0% 20%;
 
 }
-.highest-SR{
+.highest-SR, .economy, .crises, .predictor, .conclusion, .datamethod{
     display: inline-block;
     text-align: left;
     padding: 0% 20% 0% 20%;
 
 }
-
-iframe{
+.oneplot{
+    overflow: hidden;
+    padding-top:56.25%;
+    position: relative;
+}
+.oneplot iframe{
+    border:0;
     width: 100%;
-    height: 800px;
+    left:0;
+    height: 100%;
+    top:0;
+    position: absolute;
+}
+.oneplot-4x3{ /*Aspect Ratio*/
+    padding-top: 75%;
+}
+.scatmat{
+    float:left;
+    width: 50%;
+    overflow:hidden;
+    padding-top:56.25%;
+    position: relative;    
+}
+.scatmat iframe{
+    border:0;
+    width: 100%;
+    left:0;
+    height: 100%;
+    top:0;
+    position: absolute;
+}
+.scatmat-4x3{
+    padding-top:75%;
 }

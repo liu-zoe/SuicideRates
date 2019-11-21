@@ -12,10 +12,14 @@
 <!--Add key words here-->
 
 <!--Style-->
-<link rel="stylesheet" href="bootstrap.css">
+<!--<link rel="stylesheet" href="bootstrap.css">-->
+<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
 <link rel="stylesheet" href="main.css">
 <!--Fonts-->
-<link rel="stylesheet" href="fonts.css">
+<!--<link rel="stylesheet" href="fonts.css">-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap">
+
+
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 <body>
@@ -27,26 +31,241 @@
             </div>
             <div class="intro-prose">
                 <h2> What is this? </h2>
-                <p> An exploration of suicide data from 1979 to 2016 in 128 countries reported in the WHO Mortality
-                    Database and how the reported suicide rates change with the economy.</p>
+                <p> An exploration of suicide data from 1979 to 2016 in 128 countries, reported in the 
+                    <a href="https://www.who.int/healthinfo/mortality_data/en/">WHO Mortality
+                    Database</a>, examining how national suicide rates change with the economy.</p>
             </div>
         </section>
-        <section class="highest-SR">
-            <h2> Which countries have the highest suicide rates?</h2>
-            <p>Two countries stands out on top of the chart: Hungary and Lithuania.</p>
-            <iframe frameborder="0" scrolling="yes" src="https://plot.ly/~zoelzh/315.embed"></iframe>
-            <p>To find out what other countries have high suicide rates (SR), we tabulate the top 5 countries with the
-                highest SR from 1980 to 2016 and then counted how many times each country appears. </p>
-            <iframe frameborder="0" scrolling="yes" src="https://plot.ly/~zoelzh/319.embed"></iframe>    
-            <p>Hungary ranked the highest in SR from 1980 to 1992. In 1993, Latvia rose to the top (SR=42.87), 
-                with Lithuania as a close second (SR=42.69). 
-                Starting from 1994 onwards, Lithuania remained on the top of the chart.</p>
-            <p>The countries that frequently rank in the top 5 include (but are not limited to) 
-                Lithuania, Russia, Hungary, Latvia, Belarus, Slovenia, and Estonia. 
-                Only two East Esian Countries made it to the list -- Korea and Japan.</p>
-            <iframe frameborder="0" scrolling="yes" src="https://plot.ly/~zoelzh/335.embed"></iframe>    
+        <section class="story">
+            <section class="highest-SR">
+                <h2> Which countries have the highest suicide rates? </h2>
+                <p> Naturally, the first questions to ask are which country (or countries) have the 
+                    highest suicide rates (SR), and whether they stay on top over time. A first glimpse reveals 
+                    two countries with very high SR: Hungary and Lithuania. 
+                    The majority of the other countries, however, cluster between 0 to 30 per 100 thousand
+                    people.</p>
+                <div class='oneplot'>
+                    <iframe frameborder="0" scrolling="yes" src="https://plot.ly/~zoelzh/396.embed" 
+                    ></iframe>    
+                </div>
+                <p>To find out which other countries have high suicide rates, we tabulated the top 5 countries with
+                    the highest SR from 1979 to 2016, then counted how many times each country appeared. </p>
+                <div class='oneplot'>
+                    <iframe frameborder="0" scrolling="yes" src="https://plot.ly/~zoelzh/398.embed"></iframe>
+                </div>
+                <div class="freqbar">
+                    <iframe frameborder="0" scrolling="yes" src="https://plot.ly/~zoelzh/444.embed" align="right"
+                        height="500px" width="500px"></iframe>
+                </div>
+                <p>Hungary ranked the highest in SR from 1979 to 1992. In 1993, Latvia rose to the top (SR=42.87),
+                    with Lithuania as a close second (SR=42.69).
+                    Starting from 1994 onwards, Lithuania remained on the top of the chart.</p>
+                <p>The countries that most-frequently rank in the top 5 include (but are not limited to)
+                    Lithuania, Hungary, Russia, Latvia, Estonia, Slovenia, and Belarus.
+                    Only two East Asian countries made it to the list -- South Korea and Japan. 
+                    South Korea appeared in the top 5 a total of 9 times across the years, compared to 
+                    Japan, which only made it twice.</p>
+            </section>
+            <section class="economy">
+                <h2>Suicide rates and economy</h2>
+                <p>We are most interested in how changes in economic growth impact national suicide rates. 
+                    Our hypothesis is that SR is negatively correlated with economic growth; 
+                    that is, national SR decreaseS as an economy imporoves and vice versa. 
+                    Four commonly used economic statistics were selected: 
+                    GDP (per capita PPP constant in 2011 international $), 
+                    unemployment rate, consumer price index, and Gini coefficient.
+                </p>
+                <div class="scatmat">
+                    <iframe frameborder="0" scrolling="no" src="https://plot.ly/~zoelzh/446.embed" align="left"></iframe>
+                </div>
+                <div class="scatmat">
+                    <iframe frameborder="0" scrolling="no" src="https://plot.ly/~zoelzh/448.embed" align="right"></iframe>
+                </div>
+                <div class="scatmat">
+                    <iframe frameborder="0" scrolling="no" src="https://plot.ly/~zoelzh/450.embed" align="left"></iframe>
+                </div>
+                <div class="scatmat">
+                    <iframe frameborder="0" scrolling="no" src="https://plot.ly/~zoelzh/452.embed" align="right"></iframe>
+                </div>
+                <p>When plotted against suicide rates, most of the economic indices show no apparent 
+                    correlation to SR. Pearson's correlation coefficient is 0.05 between GDP and SR, 
+                    -0.05 between consumer price index and SR, and -0.03 between unemployment rate and SR.
+                    Curiously, Gini coefficient is the only economic index that shows a 
+                    semi-moderate correlation with SR (r=-0.49). However,
+                    the association appears to be counter-intuitive: as the Gini coefficient increases (that is, as
+                    economic inequality increases), SR decreases. </p>
+                    <p>Before too-rapidly attempting to make sense
+                    of this correlation, we reviewed existing literature and found a mixed track record of Gini
+                    coefficient and SR. 
+                    Some studies
+                    <sup><a href="https://doi.org/10.1136/jech.2006.052993">1</a>, 
+                        <a href="https://dx.doi.org/10.1371%2Fjournal.pone.0124934">2</a>, 
+                        <a href="https://doi.org/10.1016/j.socscimed.2012.02.042">3</a>,
+                        <a href="https://doi.org/10.1016/S1514-0326(10)60006-2">4</a>,
+                    </sup> 
+                    find higher inequality is correlated with higher rates of
+                    suicide, while other studies <sup>
+                        <a href="https://doi.org/10.2466/pr0.1996.79.3.978">5</a>,
+                        <a href="https://doi.org/10.1017/S1041610207005352">6</a>
+                    </sup>
+                    find higher inequality is correlated to lower rates.
+                    And sometimes, there is no correlation discernable<sup>
+                        <a href="http://dx.doi.org/10.1080/0003684042000295304">7</a>
+                    </sup>. 
+                    It would appear, then, that there is no single economic indicator that maintains across all
+                    countries. We need to instead examine the economy's impact on suicide rates
+                    within subgroups of countries.
+                    </p>
+            </section>
+            <section class="crises">
+                <h2>Suicide rates and crises</h2>
+                <p>We selected crises with abrupt impacts on related countries’ economies, to confirm whether suicide rates change
+                    in response to these transformations. We examined a political crisis (the dissolution of
+                    the Soviet Union) and an economic crisis (the 1997 Asian financial crisis) to determine whether any economic
+                    indicators were associated with SR changes.</p>
+                <h3>The dissolution of the Soviet Union</h3>
+                <p>To study the effect of the dissolution of the Soviet Union on SR trends, we compared SR in the 15
+                    countries composing the USSR. Seven of them (Lithuania, Russia, Latvia, Belarus, 
+                    Estonia, Kazakhstan, and Ukraine) display very similar patterns in SR across the years following the
+                    dissolution of the USSR. Specifically, during 1991 to 1995 (that is, the five years including and immediately
+                    following the dissolution) a similar jump in SR can be seen in all seven countries. Interestingly,
+                    in the other eight countries, no such increase in SR is found across that time period.</p>
+                <div class='oneplot'>
+                    <iframe frameborder="0" scrolling="no" src="https://plot.ly/~zoelzh/454.embed"></iframe>    
+                </div>    
+                <p>To return (now) national economies to the equation, GDP appears to be a rather reliable predictor of SR in the first
+                    USSR cohort. As their economies suffered and GDP dropped from 1991 to 1995, SR increased significantly. 
+                    After 1995, as GDP rebounded, SR steadily decreased.</p>
+                <p>The relationship between SR and GDP is very different in the second USSR cohort, where
+                 no dramatic increase in SR was observed during the 5 years following the dissolution of the USSR, even though 
+                    GDP suffered in these countries as well. In general, too, SR in the second cohort are lower than that in the first cohort.</p>                
+                <div class="scatmat">
+                    <iframe frameborder="0" scrolling="no" src="https://plot.ly/~zoelzh/456.embed" align="left"></iframe>
+                </div>
+                <div class="scatmat">
+                    <iframe frameborder="0" scrolling="no" src="https://plot.ly/~zoelzh/478.embed" align="right"></iframe>
+                </div>
 
+                <p>To quantify the association between SR and GDP, we calculated the correlation of GDP and SR in those
+                    two cohorts and found strong, negative correlations in the first cohort. All but 2 countries
+                    (Belarus and Kazakhstan) have a correlation coefficient of -0.88 or smaller. Even for Belarus and
+                    Kazakhstan, the correlation coefficients are moderately strong.</p>
+                <p>The correlations in the second cohort, however, are weaker and of mixed directions. Only two countries 
+                    show an absolute correlation value larger than 0.5: Tajikistan and Turkmenistan. Tajikistan 
+                    has a positive correlation of 0.65. Turkmenistan, the outlier in the 2nd cohort, has a moderately strong and 
+                    negative correlation (-0.76), which is perhaps caused by large decrease in SR and a steady GDP growth 
+                    starting from 2008 onwards.  
+                </p>
+                <div class='oneplot'>
+                    <iframe frameborder="0" scrolling="yes" src="https://plot.ly/~zoelzh/460.embed"></iframe>
+                </div>
+                <p>What do the seven countries have in common: what, if anything, made them suffer the same wave of high suicide rates
+                    after the dissolution of the Soviet Union? What distinguishes them from the other eight countries?
+                    Is it because they are countries that are immediately adjacent, geographically, to Russia? Or
+                    perhaps these countries have a higher percentage of ethnic-Russian citizens, resulting in
+                    dissolution being received as a bigger social blow to those residents? We don’t have answers to
+                    those questions. What we have learned, however, is that there is no one economic index that works across
+                    the board for all 15 countries: but that one economic index may show a stronger impact in a subset of
+                    countries than in others.</p>
+                <h3>1997 Asia Financial Crisis</h3>
+                <h3>Japan</h3>
+                <p>Prior to the 1997 Asia Financial Crisis, a Japanese asset-price bubble collapsed in late 1991 and
+                    early 1992. Suicide rates increased from 16.03 per 100k in 1991 to 16.82 in 1992.  
+                    This, in turn, helps us put the impact of the 1997 Asian financial crisis in context. The
+                    tremendous increase in suicide rates post Asian finanical crisis, 
+                    from 18.64 in 1997 to 25.12 in 1998, dwarfs the previous increase in 1992. 
+                    Among the four economic indicators, unemployment rate stands out -- and proves 
+                    to be strongly associated with SR in Japan. The two rises in SR in the '90s were both coupled 
+                    with rising unemployment rates.</p>
+                <div class='oneplot'>
+                    <iframe frameborder="0" scrolling="yes" src="https://plot.ly/~zoelzh/462.embed"></iframe>
+                </div>
+                <h3>Hong Kong</h3>
+                <p>Similarly to Japan, Hong Kong suffered a sharp economic contraction during the 1997 Asian financial
+                    crisis. SR in Hong Kong increased from 9.89 in 1997 to 12.94 in 1998, which was
+                    accompanied by a rise in the unemployment rate. The next climb in SR, from 2000
+                    to 2004, was once again shadowed by a large increase in unemployment.</p>
+                <p>This strong association of suicide and unemployment rates appear to be a trend for both 
+                    Japan and Hong Kong across the time span of 1979 to 2016.
+
+                </p>
+                <div class='oneplot'>
+                    <iframe frameborder="0" scrolling="yes" src="https://plot.ly/~zoelzh/466.embed"></iframe>
+                </div>
+                
+                <h3>What about other countries impacted by the 1997 financial crisis?</h3>
+                <p>An increase in SR and unemployment rates occured in South Korea and Thailand from 1997 to 1998, 
+                    but not in Malaysia and the Philippines. More importantly, the unemployment rates in the above
+                    four countries do not show a consistent and strong association with SR over time (as in 
+                    Japan and Hong Kong.)</p>
+                <div class="scatmat">
+                    <iframe frameborder="0" scrolling="no" src="https://plot.ly/~zoelzh/468.embed" align="left"></iframe>
+                </div>
+                <div class="scatmat">
+                    <iframe frameborder="0" scrolling="no" src="https://plot.ly/~zoelzh/470.embed" align="right"></iframe>
+                </div>
+                <div class="scatmat">
+                    <iframe frameborder="0" scrolling="no" src="https://plot.ly/~zoelzh/472.embed" align="left"></iframe>
+                </div>
+                <div class="scatmat">
+                    <iframe frameborder="0" scrolling="no" src="https://plot.ly/~zoelzh/474.embed" align="right"></iframe>
+                </div>
+
+                <p>Like the dissolution of Soviet Union, the financial crisis appears to have had a stronger SR impact on some
+                    countries than on others. Unemployment rate is associated with SR in Japan, Hong Kong, South Korea,
+                    and Thailand during that crisis, but not in Malaysia and Phillipines. </p>
+                <p>Crises are like a magnifying glass. By examining SR during
+                    political and economic crises, we were able to see how SR change with the economy in extreme cases.
+                    Despite participation in supranational blocs, a given nation’s SR does not always appear affected by
+                    such memberships. Other trans-national factors may be at play.
+                    If we cannot find the most efficient economic predictor for SR across the globe or regions, can we
+                    find the most efficient economic predictor for each country?</p>
+            </section>
+            <section class='predictor'>
+                <h2>Finding the strongest economic predictor for SR in each country</h2>
+                <p>We used Pearson’s correlation coefficient to quantify the association between SR and GDP,
+                    unemployment rate, consumer price index, and Gini coefficient. The maximum absolute value of the 
+                    correlation coefficient is calculated to determine which economic statistic is the best predictor for SR in that country. </p>
+                <div class='oneplot'>
+                   <iframe frameborder="0" scrolling="yes" src="https://plot.ly/~zoelzh/476.embed"></iframe> 
+                </div>
+                <p>GDP and consumer price index appear to show strong association with
+                more countries (43 and 42 repectively) than unemployment and Gini coefficient.
+                This, however, should not be taken to mean GDP or consumer price index are better 
+                economic predictors of SR, vis-a-vis unemployment rate or Gini coefficients. 
+                If there is one takeaway, it should be this: When
+                studying how suicide rates change on a national level, different aspects of the economy may differently impact 
+                each country. There is no one single economic predictor that adequately fits them all. 
+                </p>
+            </section>
+            <section class='conclusion'>
+                <h2>The bottom line</h2>
+                <p>To quote Tolstoy in <em>Anna Karenina</em> 
+                    <sub>(who committed suicide in chapter 26!)</sub>, 
+                    "each unhappy family is unhappy in its own way."
+                    While, broadly speaking, the economy does have an impact on SR, 
+                    the degree and the dynamic still vary -- "in its own way" -- for each individual country. 
+                </p>
+            </section>
         </section>
+        <section class='data'>
+            <div class='datamethod'>
+                <h2>Data and method</h2>
+                <p>The suicide rates data were extracted from 
+                    <a href="https://www.who.int/healthinfo/mortality_data/en/">WHO Mortality database</a> 
+                    in August 2019. 
+                    The data contain 128 countries; 
+                    <a href="http://apps.who.int/healthinfo/statistics/mortality/whodpms/help/faq.htm">not all countries were included</a>,  
+                    as some countries did not report mortality data to WHO, while others
+                    provided data not in standard ICD codes (and thus not included in the database.) 
+                    Economic statistics (GDP, unemployment etc.) were extracted from 
+                    the <a href="https://data.worldbank.org/">World Bank Open Data</a>. 
+                    The analyses use nation as a unit without looking into SR of various
+                    age or gender subgroups in order to study the impact of economy, which tend to be reported
+                    on national levels, on suicide trends. </p>
+            </div>
+        </section>
+
     </main>
 </body>
 
