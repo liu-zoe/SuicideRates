@@ -1,7 +1,7 @@
 # Does the economy affect suicide rates?
 An exploration of suicide data from 1979 to 2016 in 128 countries, examining how national suicide rates change with the economy. 
 
-#### -- Project Status: [Active] --
+#### -- [Link to Data Story](https://liu-zoe.github.io/SuicideRates/) --
 
 ## __Project Description__
 We started by exploring the WHO suicide data and want to study the global suicide trends across time and what may influence the trends. 

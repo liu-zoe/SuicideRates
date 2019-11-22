@@ -3,7 +3,6 @@ body{
     color: white;
     font-family: 'Darker Grotesque', sans-serif;
 }
-
 h1{
     font-size:4em;
     font-weight:bolder;
@@ -20,21 +19,21 @@ p{
     font-size:2em;
 }
 .intro, .story, .data {
-    text-align: center
+    text-align: center;
 }
-
 .intro-prose{
     display: inline-block;
     text-align: left;
     padding: 0% 20% 0% 20%;
 
 }
-.highest-SR, .economy, .crises, .predictor, .conclusion, .datamethod{
+.SR, .economy, .crises, .predictor, .conclusion, .datamethod{
     display: inline-block;
     text-align: left;
     padding: 0% 20% 0% 20%;
 
 }
+/*Plots*/
 .oneplot{
     overflow: hidden;
     padding-top:56.25%;
@@ -48,24 +47,18 @@ p{
     top:0;
     position: absolute;
 }
-.oneplot-4x3{ /*Aspect Ratio*/
-    padding-top: 75%;
-}
-.scatmat{
+.twoplot{
     float:left;
     width: 50%;
     overflow:hidden;
     padding-top:56.25%;
     position: relative;    
 }
-.scatmat iframe{
+.twoplot iframe{
     border:0;
     width: 100%;
     left:0;
     height: 100%;
     top:0;
     position: absolute;
-}
-.scatmat-4x3{
-    padding-top:75%;
 }
